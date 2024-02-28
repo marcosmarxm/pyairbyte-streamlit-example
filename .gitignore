@@ -20,6 +20,7 @@ parts/
 sdist/
 var/
 wheels/
+.venv-source-github/
 share/python-wheels/
 *.egg-info/
 .installed.cfg
