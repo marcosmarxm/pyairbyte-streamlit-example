@@ -1,4 +1,0 @@
-airbyte
-streamlit
-airbyte-source-github
-pandas

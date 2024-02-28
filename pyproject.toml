@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "pyairbyte-github-example"
+version = "0.1.0"
+description = "A streamlit example app using pyairbyte"
+authors = ["Marcos Marx <marcos@airbyte.io>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "^2.1.4"
+streamlit = "^1.31.0"
+airbyte = "^0.7.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
