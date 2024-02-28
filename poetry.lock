@@ -88,6 +88,24 @@ files = [
 pydantic = ">=1.9.2,<2.0.0"
 
 [[package]]
+name = "airbyte-source-github"
+version = "1.5.7"
+description = "Source implementation for Github."
+optional = false
+python-versions = "*"
+files = [
+    {file = "airbyte-source-github-1.5.7.tar.gz", hash = "sha256:81789e3fb867b49f5edbb9c01fb0fb925099cb4345e154999a862ed9592b5160"},
+    {file = "airbyte_source_github-1.5.7-py3-none-any.whl", hash = "sha256:059de92e08caa77252f954e3eb80e3fd5afcdce0776cb08a224e02f76b021651"},
+]
+
+[package.dependencies]
+airbyte-cdk = "*"
+sgqlc = "*"
+
+[package.extras]
+tests = ["freezegun (>=1.2,<2.0)", "pytest (>=6.2,<7.0)", "pytest-mock (>=3.6.1,<3.7.0)", "requests-mock (>=1.9.3,<1.10.0)", "responses (>=0.23.1,<0.24.0)"]
+
+[[package]]
 name = "altair"
 version = "5.2.0"
 description = "Vega-Altair: A declarative statistical visualization library for Python."
@@ -825,6 +843,17 @@ protobuf = ">=3.19.5,<3.20.0 || >3.20.0,<3.20.1 || >3.20.1,<4.21.1 || >4.21.1,<4
 grpc = ["grpcio (>=1.44.0,<2.0.0.dev0)"]
 
 [[package]]
+name = "graphql-core"
+version = "3.2.3"
+description = "GraphQL implementation for Python, a port of GraphQL.js, the JavaScript reference implementation for GraphQL."
+optional = false
+python-versions = ">=3.6,<4"
+files = [
+    {file = "graphql-core-3.2.3.tar.gz", hash = "sha256:06d2aad0ac723e35b1cb47885d3e5c45e956a53bc1b209a9fc5369007fe46676"},
+    {file = "graphql_core-3.2.3-py3-none-any.whl", hash = "sha256:5766780452bd5ec8ba133f8bf287dc92713e3868ddd83aee4faab9fc3e303dc3"},
+]
+
+[[package]]
 name = "greenlet"
 version = "3.0.3"
 description = "Lightweight in-process concurrent programming"
@@ -1256,7 +1285,6 @@ files = [
 numpy = [
     {version = ">=1.22.4,<2", markers = "python_version < \"3.11\""},
     {version = ">=1.23.2,<2", markers = "python_version == \"3.11\""},
-    {version = ">=1.26.0,<2", markers = "python_version >= \"3.12\""},
 ]
 python-dateutil = ">=2.8.2"
 pytz = ">=2020.1"
@@ -2003,6 +2031,24 @@ testing = ["build[virtualenv]", "filelock (>=3.4.0)", "flake8-2020", "ini2toml[l
 testing-integration = ["build[virtualenv] (>=1.0.3)", "filelock (>=3.4.0)", "jaraco.envs (>=2.2)", "jaraco.path (>=3.2.0)", "packaging (>=23.2)", "pytest", "pytest-enabler", "pytest-xdist", "tomli", "virtualenv (>=13.0.0)", "wheel"]
 
 [[package]]
+name = "sgqlc"
+version = "16.3"
+description = "Simple GraphQL Client"
+optional = false
+python-versions = ">=3.7,<4.0"
+files = [
+    {file = "sgqlc-16.3-py3-none-any.whl", hash = "sha256:89d468386a4ba4b5ade991623228b6fb0a25bea1f25643ccac130fb3ef565b72"},
+    {file = "sgqlc-16.3.tar.gz", hash = "sha256:be08857775aa3e65ef7b2c1f0cdcc65dd5794907b162b393c189187fee664558"},
+]
+
+[package.dependencies]
+graphql-core = ">=3.1.7,<4.0.0"
+
+[package.extras]
+requests = ["requests"]
+websocket = ["websocket-client"]
+
+[[package]]
 name = "six"
 version = "1.16.0"
 description = "Python 2 and 3 compatibility utilities"
@@ -2581,5 +2627,5 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 
 [metadata]
 lock-version = "2.0"
-python-versions = "^3.10"
-content-hash = "7c734095fb3549ae199cf039f7e6dee15be4ed0d88a16c04b4cb6e879bd08ac9"
+python-versions = ">3.10,<3.12"
+content-hash = "88588599afbe9a68b1b15e1f35b3c841f12e31bed1aad21a23199a80469eb80b"
